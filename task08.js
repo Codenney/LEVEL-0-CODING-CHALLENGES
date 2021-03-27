@@ -1,18 +1,18 @@
-function timeConverter(numberToConvert){
-    var convertToHour = Math.floor(numberToConvert / 60);
+function timeConverter(minutesToConvert){
+    var convertToHour = Math.floor(minutesToConvert / 60);
 
-    var convertToMinutes = numberToConvert % 60;
+    var convertToMinutes = minutesToConvert % 60;
 
     if(convertToHour <= 1 && convertToMinutes <= 1){
-        console.log(numberToConvert + ' will become "' + convertToHour + ' hour, ' + convertToMinutes + ' minute"')
+        console.log(minutesToConvert + ' will become "' + convertToHour + ' hour, ' + convertToMinutes + ' minute"')
     } else if (convertToHour > 1 && convertToMinutes > 1) {
-        console.log(numberToConvert + ' will become "' + convertToHour + ' hours, ' + convertToMinutes + ' minutes"')
+        console.log(minutesToConvert + ' will become "' + convertToHour + ' hours, ' + convertToMinutes + ' minutes"')
     } else {
-        console.log(numberToConvert + ' will become "' + convertToHour + ' hour, ' + convertToMinutes + ' minutes"')
+        console.log(minutesToConvert + ' will become "' + convertToHour + ' hour, ' + convertToMinutes + ' minutes"')
     }
 
 }
-timeConverter(09);
+timeConverter(9);
 timeConverter(71);
 timeConverter(133);
 

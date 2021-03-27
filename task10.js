@@ -1,19 +1,25 @@
-var firstString = "running";
-var secondString = "dancing";
+function commonLetters(firstString, secondString){
 
-var newString;
-var notCommon;
+    var commonCharacter = [];
 
-for(i = 0; i < firstString.length; i++){
-    //console.log(firstString[i]);
-    for(i = 0; i < secondString.length; i++){
-        if(secondString[i] === firstString[1]){
-            newString += firstString[i];
+    for(i = 0; i < firstString.length; i++){
+
+        firstString = firstString.toLowerCase();
+        secondString = secondString.toLowerCase();
+
+        var includeString = secondString.includes(firstString[i]); /* This checks if the firstString character is in the second string and return a boolean.*/
+        if(includeString){
+            if(commonCharacter.includes(firstString[i]) == false){
+                commonCharacter.push(firstString[i]);
+            }
+            
         }
+        // var commonCharacters = commonCharacter.join();
     }
+    console.log("'Common letters: " + commonCharacter + "'");
 }
 
-console.log(goaway);
+commonLetters("house", "computers");
 
 
 

@@ -1,16 +1,22 @@
 function listOfVowels(string){
-
+    var userString = string;
     var vowel = ['a', 'e', 'i', 'o', 'u'];
-    var newVowel;
+
+    string = string.toLowerCase();
+    var includedVowels = [];
+
     for(i = 0; i < string.length; i++){
-        for(string[i] in vowel){
-            newVowel += string[i];
-        } 
+        var includeVowel = vowel.includes(string[i]);
+        if(includeVowel){
+            if(includedVowels.includes(string[i]) == false){
+                includedVowels.push(string[i]);
+            }
+        }
     }
-    console.log(newVowel);
+    console.log("Input: " + userString + ", Output: Vowels: " + includedVowels + ".");
 }
 
-listOfVowels("myname");
+listOfVowels("Umuzi");
 
 /* Write a function that takes in a string and then prints out all the vowels in the string. 
 Make sure it can deal with capital letters and small letters.

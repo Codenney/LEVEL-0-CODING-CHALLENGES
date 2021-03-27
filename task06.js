@@ -1,15 +1,16 @@
-function maximumNumber(firstNumber, secondNumber, thirdNumber){
+function maximumNumber(...args){
+    var highValue = [0];
 
-    if(firstNumber > secondNumber && firstNumber > thirdNumber){
-        return firstNumber;
-    } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
-        return secondNumber;
-    } else {
-        return thirdNumber;
+    for(i = 0; i < args.length; i++){
+        if(highValue[0] < args[i]){
+            highValue[0] = args[i];
+        }
     }
+    console.log("The highest value is: " + highValue);
+    
 }
 
-console.log(maximumNumber(4,5,8));
+maximumNumber(1,22,3,2);
 
 
 /* Bonus: How can you change the code so it can take in any number of numbers? Do this without using builtin methods. 
@@ -20,6 +21,25 @@ Again, the function should expect a bunch of numbers as input, not an array or l
 Please do not write a whole new function. Upgrade your existing function.
 
 maximum(1,22,3,2)  // this should work*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
